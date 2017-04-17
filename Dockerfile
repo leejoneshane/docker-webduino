@@ -6,6 +6,9 @@ RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 RUN git clone https://github.com/webduinoio/webduino-blockly.git \
     && cd webduino-blockly \
+    && mv * ../ \
+    && cd .. \
+    && rm -rf webduino-blockly \
     && npm install -g bower \
     && bower install
 
