@@ -10,6 +10,6 @@ RUN git clone https://github.com/webduinoio/webduino-blockly.git \
     && cd .. \
     && rm -rf webduino-blockly \
     && npm install -g bower \
-    && bower install
+    && bower --allow-root install
 
 CMD ["npm","start"]
