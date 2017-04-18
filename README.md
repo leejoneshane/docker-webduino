@@ -10,9 +10,9 @@ To run the blockly editor, you must mapping tcp 8080 port when run the container
 
 docker run -p 80:8080 --name webduino -d leejoneshane/docker-webduino
 
-Then go to http://docker_host_ip:8080/index.html
+Then go to http://docker_host_ip/index.html
 
-If you want to change the webserver confugure, you should copy the container's VOLUME data first, command below:
+If you want to change the webserver confuguration, you should copy the container's VOLUME data first, command below:
 
 docker cp webduino:/usr/src/app /root/webduino
 
