@@ -3,7 +3,7 @@ MAINTAINER leejoneshane@gmail.com
 
 WORKDIR /usr/src/app
 RUN apt-get update \
-    && apt-get install mosquitto \
+    && apt-get -y install mosquitto \
     && apt-get clean \
     && git clone https://github.com/webduinoio/webduino-blockly.git \
     && mv webduino-blockly/* . \
