@@ -7,6 +7,6 @@ RUN git clone https://github.com/webduinoio/webduino-blockly.git \
     && rm -rf webduino-blockly \
     && npm install
     
-EXPOSE 8080 1883
+EXPOSE 8080
 VOLUME ["/usr/src/app"]
 CMD ["npm","start"]
