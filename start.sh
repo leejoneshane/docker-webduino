@@ -2,4 +2,4 @@
 
 cd /usr/src/app
 service mosquitto start
-npm install
+npm start
