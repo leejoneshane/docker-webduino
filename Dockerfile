@@ -9,7 +9,8 @@ RUN apt-get update \
     && mv webduino-blockly/* . \
     && rm -rf webduino-blockly \
     && npm install
-    
+ADD start.sh /sbin
+RUN chmod 711 /sbin/start.sh
 EXPOSE 8080 1883
 VOLUME ["/usr/src/app"]
-CMD ["sh", "-c", "mosquitto && npm start"]
+CMD ["/sbin/start.sh"]
