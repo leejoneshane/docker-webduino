@@ -12,4 +12,4 @@ RUN apt-get update \
     
 EXPOSE 8080 1883
 VOLUME ["/usr/src/app"]
-CMD mosquitto ; npm start
+CMD ["sh", "-c", "mosquitto ; npm start"]
