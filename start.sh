@@ -1,5 +1,5 @@
 #!/bin/sh
 
 cd /usr/src/app
-service mosquitto start
+mosquitto start
 npm start
