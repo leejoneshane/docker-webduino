@@ -7,7 +7,7 @@ RUN apk add --no-cache git mosquitto mosquitto-clients vim \
     && mv webduino-blockly/* . \
     && rm -rf webduino-blockly \
     && npm install \
-    && sed -ri -e 's/8080/80/g' /usr/arc/app/webserver.js
+    && sed -ri -e 's/8080/80/g' /usr/src/app/webserver.js
     
 ADD start.sh /sbin
 RUN chmod 711 /sbin/start.sh
