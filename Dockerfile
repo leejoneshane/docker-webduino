@@ -13,5 +13,4 @@ ADD start.sh /sbin
 RUN chmod 711 /sbin/start.sh
 
 EXPOSE 80 1883
-VOLUME ["/usr/src/app"]
 CMD ["/sbin/start.sh"]
