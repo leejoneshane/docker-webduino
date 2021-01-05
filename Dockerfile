@@ -3,10 +3,11 @@ MAINTAINER leejoneshane@gmail.com
 
 WORKDIR /usr/src/app
 RUN apk add --no-cache git mosquitto mosquitto-clients vim \
+    && npm install -g bower \
     && git clone https://github.com/webduinoio/webduino-blockly.git \
     && mv webduino-blockly/* . \
     && rm -rf webduino-blockly \
-    && npm install \
+    && npm install && bower install \
     && sed -ri -e 's/8080/80/g' /usr/src/app/webserver.js
     
 ADD start.sh /sbin
