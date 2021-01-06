@@ -7,7 +7,7 @@ RUN apk add --no-cache git mosquitto mosquitto-clients vim \
     && git clone https://github.com/webduinoio/webduino-blockly.git \
     && mv webduino-blockly/* . \
     && rm -rf webduino-blockly \
-    && npm install && bower install \
+    && npm install && bower --allow-root install \
     && sed -ri -e 's/8080/80/g' /usr/src/app/webserver.js
     
 ADD start.sh /sbin
